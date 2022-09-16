@@ -1,6 +1,7 @@
 import { Component } from 'react';
 
 import CardList from './components/card-list/card-list.component';
+import SearchBox from './components/search-box/search-box.component';
 import logo from './logo.svg';
 import './App.css';
 
@@ -52,13 +53,8 @@ render() {
   )
   return (
     <div className="App">
-      <input 
-        className='search-box' 
-        type='search' 
-        placeholder='Search Monsters' 
-        onChange={ onSearchChange}
-      />
-
+      <h1 classname='title'>Monsters Rolodex</h1>
+      <SearchBox onChangeHandler={onSearchChange} placeholder='search monsters' className='monsters-search-box'/>
       <CardList monsters={filteredMonsters}/>
 
     </div>
